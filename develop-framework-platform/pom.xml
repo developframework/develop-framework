@@ -4,20 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.developframework</groupId>
+    <parent>
+        <groupId>com.github.developframework</groupId>
+        <artifactId>develop-framework</artifactId>
+        <version>0.1</version>
+    </parent>
     <artifactId>develop-framework-platform</artifactId>
-    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <description>基础依赖集成</description>
-
-    <!-- 基于spring-boot -->
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.2.RELEASE</version>
-        <relativePath></relativePath>
-    </parent>
 
     <properties>
         <!-- 配置源码编译版本和编码 -->
@@ -49,22 +44,22 @@
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-commons</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>0.1</version>
             </dependency>
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-components</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>0.1</version>
             </dependency>
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-web</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>0.1</version>
             </dependency>
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-jpa</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>0.1</version>
             </dependency>
 
             <!-- 自研发项目 -->

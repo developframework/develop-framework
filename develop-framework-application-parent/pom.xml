@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.github.developframework</groupId>
         <artifactId>develop-framework-platform</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.1</version>
         <relativePath>../develop-framework-platform/pom.xml</relativePath>
     </parent>
     <artifactId>develop-framework-application-parent</artifactId>
