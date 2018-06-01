@@ -1,0 +1,38 @@
+<kite-configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xmlns="https://github.com/developframework/kite/schema"
+                    xsi:schemaLocation="
+	https://github.com/developframework/kite/schema kite-configuration-0.3.xsd">
+
+    <template-package namespace="kite-application-web">
+
+        <!-- 创建响应 CreatedKiteResponse -->
+        <template id="created-res">
+            <property data="id" />
+        </template>
+
+        <!-- 错误响应 ErrorKiteResponse -->
+        <template id="error-res">
+            <property data="level" />
+            <property data="message" />
+        </template>
+
+        <!-- 带原因的错误响应 ErrorReasonKiteResponse -->
+        <template id="error-reason-res">
+            <include id="error-res"/>
+            <array data="reasons" null-hidden="true">
+                <property data="key" alias="reason"/>
+                <property data="value"/>
+            </array>
+        </template>
+
+        <!-- 验参错误响应 ValidatedKiteResponse -->
+        <template id="error-validate-res">
+            <include id="error-res"/>
+            <array data="hints" >
+                <property data="key" alias="field" converter="develop.framework.application.web.kite.FieldNameConverter"/>
+                <property data="value" alias="hint"/>
+            </array>
+        </template>
+
+    </template-package>
+</kite-configuration>

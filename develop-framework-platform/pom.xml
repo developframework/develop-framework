@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.developframework</groupId>
+    <artifactId>develop-framework-platform</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <description>基础依赖集成</description>
+
+    <!-- 基于spring-boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+    </parent>
+
+    <properties>
+        <!-- 配置源码编译版本和编码 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+
+        <!-- 配置编译时跳过测试并且不编译测试代码 -->
+        <maven.test.skip>true</maven.test.skip>
+
+        <!-- 自研发项目版本 -->
+        <version.kite>0.3</version.kite>
+        <version.expression>1.1.0</version.expression>
+        <version.chinese-administrative-region-data>1.0.0</version.chinese-administrative-region-data>
+        <version.mock>0.2</version.mock>
+
+        <!-- 配置第三方库版本 -->
+        <version.commons-io>2.5</version.commons-io>
+        <version.mybatis-spring-boot-starter>1.2.0</version.mybatis-spring-boot-starter>
+        <version.jjwt>0.9.0</version.jjwt>
+
+        <!-- 配置插件版本 -->
+        <version.dockerfile-maven-plugin>1.4.0</version.dockerfile-maven-plugin>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 框架模块声明 -->
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>develop-framework-commons</artifactId>
+                <version>0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>develop-framework-web</artifactId>
+                <version>0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>develop-framework-jpa</artifactId>
+                <version>0.1-SNAPSHOT</version>
+            </dependency>
+
+            <!-- 自研发项目 -->
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>kite-core</artifactId>
+                <version>${version.kite}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>kite-spring</artifactId>
+                <version>${version.kite}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>kite-spring-boot-starter</artifactId>
+                <version>${version.kite}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>expression</artifactId>
+                <version>${version.expression}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>mock-core</artifactId>
+                <version>${version.mock}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>mock-db</artifactId>
+                <version>${version.mock}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>chinese-administrative-region-data</artifactId>
+                <version>${version.chinese-administrative-region-data}</version>
+            </dependency>
+
+            <!-- 第三方依赖库声明 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${version.commons-io}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${version.mybatis-spring-boot-starter}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${version.jjwt}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
