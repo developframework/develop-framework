@@ -10,17 +10,17 @@
     </parent>
     <artifactId>develop-framework-web</artifactId>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.github.developframework</groupId>
-                <artifactId>develop-framework-platform</artifactId>
-                <version>0.1-SNAPSHOT</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.developframework</groupId>
+            <artifactId>develop-framework-platform</artifactId>
+            <version>0.1-SNAPSHOT</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 
     <dependencies>
         <dependency>

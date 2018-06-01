@@ -31,7 +31,7 @@
         <!-- 自研发项目版本 -->
         <version.kite>0.3</version.kite>
         <version.expression>1.1.0</version.expression>
-        <version.chinese-administrative-region-data>1.0.0</version.chinese-administrative-region-data>
+        <version.chinese-administrative-region>1.0.0</version.chinese-administrative-region>
         <version.mock>0.2</version.mock>
 
         <!-- 配置第三方库版本 -->
@@ -103,7 +103,12 @@
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>chinese-administrative-region-data</artifactId>
-                <version>${version.chinese-administrative-region-data}</version>
+                <version>${version.chinese-administrative-region}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>chinese-administrative-region-output</artifactId>
+                <version>${version.chinese-administrative-region}</version>
             </dependency>
 
             <!-- 第三方依赖库声明 -->
