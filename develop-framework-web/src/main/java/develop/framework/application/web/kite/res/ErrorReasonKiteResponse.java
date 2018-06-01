@@ -1,8 +1,8 @@
 package develop.framework.application.web.kite.res;
 
-import develop.framework.commons.components.KeyValuePair;
 import develop.framework.commons.enums.Level;
 import develop.framework.commons.exceptions.BusinessException;
+import develop.framework.components.KeyValuePair;
 
 import java.util.List;
 

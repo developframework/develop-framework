@@ -22,6 +22,7 @@ public class BaseRepositoryFactory<T, ID extends Serializable> extends JpaReposi
         this.em = em;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     protected Object getTargetRepository(RepositoryInformation information) {
         return new BaseRepositoryImpl<T, ID>((Class<T>) information.getDomainType(), em);

@@ -1,4 +1,4 @@
-package develop.framework.commons.components;
+package develop.framework.components;
 
 /**
  * 可提取能力接口

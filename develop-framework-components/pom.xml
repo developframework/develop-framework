@@ -9,9 +9,9 @@
         <artifactId>develop-framework</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>develop-framework-commons</artifactId>
+    <artifactId>develop-framework-components</artifactId>
 
-    <description>公共工具包模块</description>
+    <description>数据结构以及组件模块</description>
 
     <dependencyManagement>
         <dependencies>
@@ -27,24 +27,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.developframework</groupId>
-            <artifactId>develop-framework-components</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 </project>

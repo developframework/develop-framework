@@ -29,13 +29,14 @@ public class ResourceSearchController {
     @Autowired
     private List<BaseRepository> baseRepositories;
 
+    @SuppressWarnings("unchecked")
     @GetMapping("{id}")
     public KiteResponse resourceDetailById(@PathVariable String resourceName, @PathVariable Long id) {
         for (BaseRepository baseRepository : baseRepositories) {
             if (baseRepository.support(resourceName)) {
                 Class<?> domainClass = baseRepository.getDomainClass();
                 ResourceName annotation = AnnotationUtils.findAnnotation(domainClass, ResourceName.class);
-                Optional resourceOptional = baseRepository.findById(id);
+                Optional<?> resourceOptional = baseRepository.findById(id);
                 KiteResponse kiteResponse = new EmptyKiteResponse(annotation.kiteNamespace(), annotation.detailKiteTemplateId());
                 kiteResponse.getDataModel().putData(RESOURCE_KEY, Assert.resourceExist(resourceName, resourceOptional));
                 return kiteResponse;

@@ -1,4 +1,4 @@
-package develop.framework.commons.components;
+package develop.framework.components;
 
 /**
  * 实体记号接口

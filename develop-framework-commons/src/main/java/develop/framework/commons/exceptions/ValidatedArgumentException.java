@@ -1,7 +1,7 @@
 package develop.framework.commons.exceptions;
 
-import develop.framework.commons.components.KeyValuePair;
 import develop.framework.commons.enums.Level;
+import develop.framework.components.KeyValuePair;
 import lombok.Getter;
 
 import java.util.List;

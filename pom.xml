@@ -12,6 +12,7 @@
     <modules>
         <module>develop-framework-platform</module>
         <module>develop-framework-commons</module>
+        <module>develop-framework-components</module>
         <module>develop-framework-web</module>
         <module>develop-framework-jpa</module>
         <module>develop-framework-application-parent</module>

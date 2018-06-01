@@ -1,4 +1,4 @@
-package develop.framework.commons.components;
+package develop.framework.components;
 
 import lombok.Getter;
 import lombok.Setter;
