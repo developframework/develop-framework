@@ -46,7 +46,7 @@
         <connection>scm:git:git@github.com:developframework/develop-framework.git</connection>
         <developerConnection>scm:git:git@github.com:developframework/develop-framework.git</developerConnection>
         <url>https://github.com/developframework/develop-framework</url>
-        <tag>HEAD</tag>
+        <tag>${project.version}</tag>
     </scm>
 
     <distributionManagement>
