@@ -46,7 +46,7 @@
         <connection>scm:git:git@github.com:developframework/develop-framework.git</connection>
         <developerConnection>scm:git:git@github.com:developframework/develop-framework.git</developerConnection>
         <url>https://github.com/developframework/develop-framework</url>
-        <tag>${project.version}</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
@@ -82,6 +82,12 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <configuration>
+                        <tagBase>${project.version}</tagBase>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
