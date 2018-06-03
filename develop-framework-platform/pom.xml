@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.github.developframework</groupId>
         <artifactId>develop-framework</artifactId>
-        <version>0.2-SNAPSHOT</version>
+        <version>0.2</version>
     </parent>
     <artifactId>develop-framework-platform</artifactId>
     <packaging>pom</packaging>
@@ -43,22 +43,22 @@
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-commons</artifactId>
-                <version>0.2-SNAPSHOT</version>
+                <version>0.2</version>
             </dependency>
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-components</artifactId>
-                <version>0.2-SNAPSHOT</version>
+                <version>0.2</version>
             </dependency>
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-web</artifactId>
-                <version>0.2-SNAPSHOT</version>
+                <version>0.2</version>
             </dependency>
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-jpa</artifactId>
-                <version>0.2-SNAPSHOT</version>
+                <version>0.2</version>
             </dependency>
 
             <!-- 自研发项目 -->

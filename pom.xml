@@ -4,7 +4,7 @@
 
     <groupId>com.github.developframework</groupId>
     <artifactId>develop-framework</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.2</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -46,7 +46,7 @@
         <connection>scm:git:git@github.com:developframework/develop-framework.git</connection>
         <developerConnection>scm:git:git@github.com:developframework/develop-framework.git</developerConnection>
         <url>https://github.com/developframework/develop-framework</url>
-        <tag>HEAD</tag>
+        <tag>0.2</tag>
     </scm>
 
     <distributionManagement>
