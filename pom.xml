@@ -70,6 +70,7 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!-- Source Plugin -->
                 <plugin>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>3.0.1</version>
@@ -83,28 +84,17 @@
                         </execution>
                     </executions>
                 </plugin>
+                <!-- Release Plugin -->
                 <plugin>
                     <artifactId>maven-release-plugin</artifactId>
                     <configuration>
-                        <tagBase>${project.version}</tagBase>
+                        <!-- 设置git 打tag的名称 -->
+                        <tagNameFormat>${project.version}</tagNameFormat>
+                        <!-- 子模块版本号自动 -->
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
                     </configuration>
                 </plugin>
-                <plugin>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10.3</version>
-                    <executions>
-                        <execution>
-                            <id>attach-javadocs</id>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <!-- 聚合，只在顶层pom项目生成一份javadoc -->
-                        <aggregate>true</aggregate>
-                    </configuration>
-                </plugin>
+                <!-- GPG Plugin -->
                 <plugin>
                     <artifactId>maven-gpg-plugin</artifactId>
                     <version>1.5</version>
@@ -129,12 +119,9 @@
 
     <profiles>
         <profile>
-            <id>release</id>
+            <id>release-profile</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                    </plugin>
                     <plugin>
                         <artifactId>maven-gpg-plugin</artifactId>
                     </plugin>
