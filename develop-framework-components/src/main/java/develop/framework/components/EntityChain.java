@@ -1,6 +1,7 @@
 package develop.framework.components;
 
 import lombok.Getter;
+import lombok.NonNull;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -35,6 +36,15 @@ public abstract class EntityChain<T extends Extractable<E>, E> implements Serial
      * @return 默认实体数组
      */
     protected abstract T[] defaultEntity();
+
+    /**
+     * 添加自定义实体
+     *
+     * @param customEntities 自定义实体
+     */
+    public void addCustomEntities(@NonNull T[] customEntities) {
+        chain.addAll(Arrays.asList(customEntities));
+    }
 
     /**
      * 提取

@@ -1,5 +1,7 @@
 package develop.framework.components;
 
+import lombok.NonNull;
+
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -31,6 +33,15 @@ public abstract class EntityRegistry<T extends EntitySign<K>, K> implements Seri
      * @return 默认实体数组
      */
     protected abstract T[] defaultEntity();
+
+    /**
+     * 添加自定义实体
+     *
+     * @param customEntities 自定义实体
+     */
+    public void addCustomEntities(@NonNull T[] customEntities) {
+        Arrays.stream(customEntities).forEach(entity -> entityMap.put(entity.key(), entity));
+    }
 
     /**
      * 提取
