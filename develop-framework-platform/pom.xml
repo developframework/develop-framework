@@ -23,7 +23,7 @@
 
         <!-- 自研发项目版本 -->
         <version.kite>0.3</version.kite>
-        <version.expression>1.1.0</version.expression>
+        <version.expression>1.2.0</version.expression>
         <version.chinese-administrative-region>1.0.0</version.chinese-administrative-region>
         <version.mock>0.2</version.mock>
 
@@ -32,6 +32,7 @@
         <version.commons-io>2.5</version.commons-io>
         <version.mybatis-spring-boot-starter>1.2.0</version.mybatis-spring-boot-starter>
         <version.jjwt>0.9.0</version.jjwt>
+        <version.swagger>2.8.0</version.swagger>
 
         <!-- 配置插件版本 -->
         <version.dockerfile-maven-plugin>1.4.0</version.dockerfile-maven-plugin>
@@ -47,17 +48,22 @@
             </dependency>
             <dependency>
                 <groupId>com.github.developframework</groupId>
-                <artifactId>develop-framework-components</artifactId>
-                <version>0.3-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-web</artifactId>
                 <version>0.3-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.github.developframework</groupId>
                 <artifactId>develop-framework-jpa</artifactId>
+                <version>0.3-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>develop-framework-mybatis</artifactId>
+                <version>0.3-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.developframework</groupId>
+                <artifactId>develop-framework-application-parent</artifactId>
                 <version>0.3-SNAPSHOT</version>
             </dependency>
 
@@ -125,6 +131,16 @@
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
                 <version>${version.jjwt}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${version.swagger}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${version.swagger}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

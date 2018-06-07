@@ -1,4 +1,4 @@
-package develop.framework.components;
+package develop.framework.commons.components;
 
 import lombok.NonNull;
 

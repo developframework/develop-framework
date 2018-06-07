@@ -1,4 +1,4 @@
-package develop.framework.application.web;
+package develop.framework.application.web.annotations;
 
 import develop.framework.commons.exceptions.UnexpectedException;
 import org.springframework.beans.BeanUtils;

@@ -1,7 +1,7 @@
 package develop.framework.application.web.controller;
 
 import develop.framework.commons.exceptions.ValidatedArgumentException;
-import develop.framework.components.KeyValuePair;
+import develop.framework.commons.components.KeyValuePair;
 import org.springframework.validation.BindingResult;
 
 import java.util.List;
