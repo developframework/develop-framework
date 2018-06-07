@@ -22,5 +22,10 @@
 			<groupId>com.github.developframework</groupId>
 			<artifactId>develop-framework-commons</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 </project>
