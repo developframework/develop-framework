@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>com.github.developframework</groupId>
 		<artifactId>develop-framework-platform</artifactId>
-		<version>0.3</version>
+		<version>0.4-SNAPSHOT</version>
 		<relativePath>../develop-framework-platform/pom.xml</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
