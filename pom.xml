@@ -131,6 +131,7 @@
             <build>
                 <plugins>
                     <plugin>
+                        <inherited>false</inherited>
                         <artifactId>maven-gpg-plugin</artifactId>
                     </plugin>
                 </plugins>
