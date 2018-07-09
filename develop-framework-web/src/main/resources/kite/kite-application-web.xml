@@ -5,19 +5,24 @@
 
     <template-package namespace="kite-application-web">
 
+        <template id="basic-res">
+            <property data="success"/>
+            <extend-port port-name="res-content" />
+        </template>
+
         <!-- 创建响应 CreatedKiteResponse -->
-        <template id="created-res">
+        <template id="created-res" extend="basic-res:res-content">
             <property data="id" />
         </template>
 
         <!-- 错误响应 ErrorKiteResponse -->
-        <template id="error-res">
+        <template id="error-res" extend="basic-res:res-content">
             <property data="level" />
             <property data="message" />
         </template>
 
         <!-- 带原因的错误响应 ErrorReasonKiteResponse -->
-        <template id="error-reason-res">
+        <template id="error-reason-res" extend="basic-res:res-content">
             <include id="error-res"/>
             <array data="reasons" null-hidden="true">
                 <property data="key" alias="reason"/>
@@ -26,11 +31,24 @@
         </template>
 
         <!-- 验参错误响应 ValidatedKiteResponse -->
-        <template id="error-validate-res">
+        <template id="error-validate-res" extend="basic-res:res-content">
             <include id="error-res"/>
             <array data="hints" >
                 <property data="key" alias="field" converter="develop.framework.application.web.kite.FieldNameConverter"/>
                 <property data="value" alias="hint"/>
+            </array>
+        </template>
+
+        <!-- 分页响应 PagerKiteResponse -->
+        <template id="pager-res" extend="basic-res:res-content">
+            <object data="pagerResult" alias="pager">
+                <property data="pager.index" />
+                <property data="pager.size" />
+                <property data="total" alias="record_total"/>
+                <property data="pageTotal" />
+            </object>
+            <array data="pagerResult.list">
+                <extend-port port-name="list-item"/>
             </array>
         </template>
 

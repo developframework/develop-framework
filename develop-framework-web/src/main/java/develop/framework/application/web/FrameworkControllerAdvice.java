@@ -56,7 +56,6 @@ public class FrameworkControllerAdvice {
      * @see ErrorKiteResponse
      */
     @ExceptionHandler(UnexpectedException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public KiteResponse unexpectedException(UnexpectedException unexpectedException) {
         log.warn("[ {} ] {}", unexpectedException.getLevel().name(), unexpectedException.getMessage());
         return new ErrorKiteResponse(unexpectedException.getLevel(), unexpectedException.getMessage());
@@ -70,7 +69,6 @@ public class FrameworkControllerAdvice {
      * @see ErrorKiteResponse
      */
     @ExceptionHandler(FrameworkException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public KiteResponse frameworkException(FrameworkException frameworkException) {
         log.error("[ {} ] {}", frameworkException.getLevel().name(), frameworkException.getMessage());
         return new ErrorKiteResponse(frameworkException.getLevel(), frameworkException.getMessage());
@@ -84,7 +82,6 @@ public class FrameworkControllerAdvice {
      * @see ErrorKiteResponse
      */
     @ExceptionHandler(Throwable.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public KiteResponse anyThrowable(Throwable throwable) {
         log.error(throwable.getMessage(), throwable);
         return new ErrorKiteResponse(Level.FATAL, throwable.getMessage());

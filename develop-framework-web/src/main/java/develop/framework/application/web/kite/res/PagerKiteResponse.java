@@ -13,6 +13,7 @@ public class PagerKiteResponse<T> extends EmptyKiteResponse {
 
 	public PagerKiteResponse(String namespace, String templateId, PagerResult<T> pagerResult) {
 		super(namespace, templateId);
+		this.dataModel.putData("success", true);
 		this.dataModel.putData("pagerResult", pagerResult);
 	}
 }

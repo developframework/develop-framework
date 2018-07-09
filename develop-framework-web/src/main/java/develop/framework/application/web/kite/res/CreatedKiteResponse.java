@@ -12,6 +12,7 @@ public class CreatedKiteResponse extends EmptyKiteResponse {
 
     public CreatedKiteResponse(int id) {
         super("kite-application-web", "created-res");
+        this.dataModel.putData("success", true);
         this.dataModel.putData("id", id);
     }
 }

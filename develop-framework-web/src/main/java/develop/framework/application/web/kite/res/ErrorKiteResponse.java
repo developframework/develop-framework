@@ -13,6 +13,7 @@ public class ErrorKiteResponse extends EmptyKiteResponse {
 
     public ErrorKiteResponse(String templateId, Level level, String message) {
         super("kite-application-web", templateId);
+        this.dataModel.putData("success", false);
         this.dataModel.putData("message", message);
         this.dataModel.putData("level", level);
     }
