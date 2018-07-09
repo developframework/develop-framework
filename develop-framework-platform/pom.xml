@@ -18,11 +18,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
-        <!-- 配置编译时跳过测试并且不编译测试代码 -->
-        <!--<maven.test.skip>true</maven.test.skip>-->
-
         <!-- 自研发项目版本 -->
-        <version.kite>0.3</version.kite>
+        <version.kite>0.4</version.kite>
         <version.expression>1.2.0</version.expression>
         <version.chinese-administrative-region>1.0.0</version.chinese-administrative-region>
         <version.mock>0.2</version.mock>
