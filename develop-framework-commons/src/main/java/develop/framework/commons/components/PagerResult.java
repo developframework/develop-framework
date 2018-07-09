@@ -31,4 +31,8 @@ public class PagerResult<T> {
 		this.pager = pager;
 		this.pageTotal = total % pager.getSize() == 0 ? total / pager.getSize() : (total / pager.getSize() + 1);
 	}
+
+	public PagerResult(int index, int size, List<T> list, int total) {
+		this(new SimplePager(index, size), list, total);
+	}
 }
